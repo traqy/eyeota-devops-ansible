@@ -13,6 +13,7 @@ The objective of this test is to implement an Ansible playbook that configures 5
 2. Create an ansible filter, that given the hosts ip address returns a stable numerical ID based on the last 2 two octets of the IP, so that no two host IDs collide given that the two last octets of the IP is unique across the inventory.
 3. For each type_b host have ansible create a file named "result.txt" in the root directory of the host that contains the number of cpus and the total bogomips for that host 
 4. For each type_a host have ansible create a file named "result.txt" in the root directory of the host that contains the generated id, number of cpus and total bogomips for each host of type_b in the inventory and the current type_a host. One host per line
+5. Requirements 1-4 should all be able to execute using only "ansible-playbook -i inventory playbook.yml" (plus any optional private key or user ansible parameter needed). Any other submitted way of running the playbook will not be accepted asa correct solution.
 
 ## Submission ##
 
