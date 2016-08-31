@@ -1,0 +1,5 @@
+eyeota-webserver1-centos7 10.20.1.41 4221 volume/ephemeral-web1
+eyeota-webserver2-centos7 10.20.1.42 4222 volume/ephemeral-web2
+eyeota-webserver3-centos7 10.20.1.33 4223 volume/ephemeral-web3
+eyeota-dataservice1-centos7 10.20.1.34 4224 volume/ephemeral-dataservice1
+eyeota-dataservice2-centos7 10.20.1.35 4225 volume/ephemeral-dataservice2

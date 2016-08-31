@@ -1,0 +1,5 @@
+eyeota-webserver1 10.20.1.21 3223 volume/ephemeral-web1
+eyeota-webserver2 10.20.1.22 3224 volume/ephemeral-web2
+eyeota-webserver3 10.20.1.23 3225 volume/ephemeral-web3
+eyeota-restapi-1 10.20.1.24 3226 volume/ephemeral-restapi1
+eyeota-restapi-2 10.20.1.25 3227 volume/ephemeral-restapi2
