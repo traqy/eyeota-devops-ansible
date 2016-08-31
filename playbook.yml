@@ -1,1 +1,8 @@
 ---
+- hosts: personal
+  remote_user: root
+  tasks:
+  - name: Get Linux cpuinfo Bogomips
+    get_cpuinfo_test: 
+    register: ansible_facts
+  - debug: var=ansible_facts
