@@ -15,5 +15,11 @@
   remote_user: root
   gather_facts: True
   tasks:  
-  - name: Write CPUINFO total number of cores and sum of bogomips
+  - name: Write CPUINFO total number of cores and sum of bogomips to type_b
     copy: content="total_cpu_cores {{ ansible_total_cpu_cores }}\nsum of bogomips {{ansible_total_sum_bogomips}}" dest=/results.txt
+- hosts: type_a
+  remote_user: root
+  gather_facts: True
+  tasks:  
+  - name: Write Generated ID and CPUINFO total number of cores and sum of bogomips of type_b hosts to to type_a hosts results.txt
+    copy: content="{% for host in groups['type_b'] %}{{ '.'.join(hostvars[host]['ansible_all_ipv4_addresses'][0].split('.')[2:]) }},{{ hostvars[host]['ansible_total_cpu_cores'] }},{{ hostvars[host]['ansible_total_sum_bogomips'] }}\n{% endfor %}" dest=/results.txt
