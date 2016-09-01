@@ -1,9 +1,9 @@
 ---
-- hosts: personal
+- hosts: all
   remote_user: root
   gather_facts: True
   tasks:
-  - name: Get Linux cpuinfo Bogomips
+  - name: Get Host CPUINFO total number of cores and sum of bogomips
     get_cpuinfo_test: 
     register: ansible_facts
   - debug: var=ansible_facts
@@ -11,3 +11,9 @@
     setup: 
       filter: ansible_all_ipv4_addresses
   - debug: msg="{{ '.'.join(ansible_all_ipv4_addresses[0].split('.')[2:]) }}"
+- hosts: type_b
+  remote_user: root
+  gather_facts: True
+  tasks:  
+  - name: Write CPUINFO total number of cores and sum of bogomips
+    copy: content="total_cpu_cores {{ ansible_total_cpu_cores }}\nsum of bogomips {{ansible_total_sum_bogomips}}" dest=/results.txt

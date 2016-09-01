@@ -1,12 +1,9 @@
-[webservers]
-eyeota-webserver1.test.com ansible_connection=ssh ansible_port=3223 ansible_user=root ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
-eyeota-webserver2.test.com ansible_connection=ssh ansible_port=3224 ansible_user=root ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
-eyeota-webserver3.test.com ansible_connection=ssh ansible_port=3225 ansible_user=root ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
+[type_a]
+eyeota-webserver1.test.com ansible_connection=ssh ansible_port=3223 ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
+eyeota-webserver2.test.com ansible_connection=ssh ansible_port=3224 ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
+eyeota-webserver3.test.com ansible_connection=ssh ansible_port=3225 ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
 
-[apiservers]
+[type_b]
 eyeota-restapi-1.test.com ansible_connection=ssh ansible_port=3226 ansible_user=root ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
 eyeota-restapi-2.test.com ansible_connection=ssh ansible_port=3227 ansible_user=root ansible_ssh_private_key_file=/Users/traqy/github/eyeota-overview/containers/dockers/webserver-ubnt14/keys/id_rsa
-
-
-[personal]
 10.8.0.11 ansible_connection=ssh ansible_user=root nsible_ssh_private_key_file=/Users/traqy/.ssh/id_rsa
